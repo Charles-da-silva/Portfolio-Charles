@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Charles Silva - Portfólio</title>
+
+<style>
+
+/* ========= zerando tudo e definindo fonte ========== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =============== variáveis de tema =============== */
+:root{
+    --bg:#ffffff;
+    --text:#222;
+    --primary:#0077cc;
+    --card:#f4f4f4;
+}
+
+.dark{
+    --bg:#121212;
+    --text:#f1f1f1;
+    --primary:#4da3ff;
+    --card:#1e1e1e;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    scroll-behavior:smooth;
+}
+
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:var(--card);
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+    padding:15px;
+    font-size: 20px;
+}
+
+ul{
+    margin-left: 30px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+.menu-btn{
+    display:none;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.theme-toggle{
+    cursor:pointer;
+}
+
+section{
+    min-height:100vh;
+    padding:80px 20px 40px;
+    max-width:1000px;
+    margin:auto;     
+}
+
+h1{
+    text-align: center;
+    margin-bottom:20px;
+    color:var(--primary);
+}
+
+p{
+    line-height:1.6;
+}
+
+table{
+    display: flexbox;
+    width:70%;
+    margin:auto;
+    border-collapse: collapse;
+    margin-top:15px;    
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+.profile{
+    display:inline-flex;
+    align-items:center;
+    gap:25px;
+}
+
+.profile img{
+    width:310px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--primary);
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:8px;
+    margin-top:15px;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.projetos a{
+    display:block;
+    margin:10px 0;
+    color:var(--primary);
+}
+
+/* =============== FORMULÁRIO =============== */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input, textarea{
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:12px;
+    border:none;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+/* =============== CONFIGS DA PARTE RESPONSIVA =============== */
+@media(max-width:768px){
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:60px;
+        right:10px;
+        background:var(--card);
+        padding:15px;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .profile{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<strong>Charles Silva</strong>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<ul id="menu">
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#formacao">Formação</a></li>
+<li><a href="#portfolio">Portfólio</a></li>
+<li><a href="#contato">Contato</a></li>
+<li><span class="theme-toggle" onclick="toggleTheme()">🌙</span></li>
+</ul>
+
+</nav>
+</header>
+
+<section id="sobre">
+<h1>Sobre Mim</h1>
+<div class="card profile">
+
+<img src="photo_profile.png" alt="Foto de Charles Silva">
+
+<div>
+<p>
+Olá! Meu nome é Charles Silva. Sou um profissional de TI com mais de 20 anos de experiência em Suporte Técnico e Infraestrutura de TI, tendo atuado nos últimos 14 anos como Engenheiro de Suporte Técnico na Dell EMC.
+<br><br>
+Possuo vasta experiência no diagnóstico de problemas complexos e excelentes habilidades analíticas, facilidade de adaptação a novos desafios, proatividade e responsabilidade, sempre focado em maior eficiência e qualidade, além de capacidade para trabalho em equipe, atenção aos detalhes e excelentes habilidades de comunicação.
+<br><br>
+Atualmente, estou cursando uma graduação em Análise e Desenvolvimento de Sistemas, mas também busco adquirir mais conhecimento em plataformas de aprendizagem para alcançar meu SONHO, que é migrar para a área de Desenvolvimento de Software, como desenvolvedor de software.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="formacao">
+<h1>Formação</h1>
+
+<div class="card">
+<h3>Formação Acadêmica</h3>
+<br>
+<ul>
+    <li>Graduação em Análise e Desenvolvimento de Sistemas - em andamento</li>
+    <li>Graduação em Gestão de TI</li>
+    <li>Curso Técnico em Redes de Computadores</li>
+    <li>Curso Técnico em Informática</li>
+</ul>
+
+<br><br>
+
+<h3>Cursos</h3>
+<br>
+<ul>
+    <li>HTML, CSS e JavaScript</li>
+    <li>Fundamentos de Programação</li>
+    <li>Arquitetura de Computadores</li>
+</ul>
+
+<br><br>
+
+<h3>Idiomas</h3>
+<br>
+<ul>
+    <li>Português (Nativo)</li>
+    <li>Inglês (Intermediário)</li>
+</ul>
+</div>
+</section>
+
+<section id="portfolio">
+<h1>Portfólio</h1>
+<div class="card projetos">
+    
+    <div>
+        <p>Aqui no meu Github poderão ser contrados repositórios com alguns projetos pessoais, dos cursos que fiz e outros da faculdade.
+        <br><br>
+        Minhas habilidades abrangem desde tecnologias web fundamentais até desenvolvimento backend com Programação Orientada a Objetos. 
+        <br>
+        <table>
+            <tr>
+                <th>Linguagens</th>            
+                <th>Frontend e Web</th>            
+                <th>Backend e Banco de Dados</th>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>C#</td>
+                <td>HTML5</td>
+                <td>ASP.NET Core</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>CSS3</td>
+                <td>Entity Framework</td>
+            </tr>
+            <tr>
+                <td>TypeScript</td>
+                <td>Bootstrap</td>
+                <td>PostgreSQL</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>React</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+        </table>
+
+        <br><br>
+        Atualmente, estou desenvolvendo um aplicativo web full-stack para a gestão de uma escola de educação infantil. Este é um projeto educacional real, focado nas demandas do mercado atual, robustez e segurança.
+        <br><br>
+        Tecnologias Utilizadas no Projeto:
+        <br><br>
+        
+        <table>
+            <tr>
+                <th>Categorias</th>
+                <th>Tecnologias</th>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>Frontend e Web</td>
+                <td>React e TypeScript</td>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>C# e ASP.NET Core MVC</td>
+            </tr>
+            <tr>
+                <td>Dados e Autenticação</td>
+                <td>Entity Framework, PostgreSQL e JWT</td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+        </table>
+        <br><br>
+        Link do Repositório: <a href="https://github.com/Charles-da-silva/SchoolApp_React_Ts_ASP.NET_Jwt_EF_PostgreSQL" target="_blank">SchoolApp_React_Ts_ASP.NET_Jwt_EF_PostgreSQL</a>
+        </p>
+        
+        
+    </div>
+
+</div>
+</section>
+
+
+<section id="contato">
+<h1>Contato</h1>
+
+<div class="card">
+
+<form id="contactForm">
+    <input type="text" id="nome" placeholder="Seu nome">
+    <input type="email" id="email" placeholder="Seu e-mail">
+    <textarea id="mensagem" rows="5" placeholder="Mensagem"></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
+</div>
+</section>
+
+<script>
+
+/* ================= MENU para celulares ================= */
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+/* ================= TEMA A SER GUARDADO VIA LOCALSTORAGE ================= */
+function toggleTheme(){
+
+    document.body.classList.toggle("dark");
+
+    // salva preferência do usuário
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("tema","dark");
+    }else{
+        localStorage.setItem("tema","light");
+    }
+}
+
+/* carrega tema salvo */
+window.onload = function(){
+    const temaSalvo = localStorage.getItem("tema");
+
+    if(temaSalvo === "dark"){
+        document.body.classList.add("dark");
+    }
+}
+
+/* ================= VALIDAÇÃO do FORM ================= */
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nome = nomeInput.value.trim();
+    const email = emailInput.value.trim();
+    const mensagem = mensagemInput.value.trim();
+
+    if(!nome || !email || !mensagem){
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailRegex.test(email)){
+        alert("Digite um e-mail válido.");
+        return;
+    }
+
+    alert("Mensagem enviada com sucesso!");
+
+    this.reset();
+});
+
+const nomeInput = document.getElementById("nome");
+const emailInput = document.getElementById("email");
+const mensagemInput = document.getElementById("mensagem");
+
+</script>
+
+</body>
+</html>
