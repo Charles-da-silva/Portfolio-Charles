@@ -74,6 +74,12 @@ nav a:hover{
     color:var(--primary);
 }
 
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
 .menu-btn{
     display:none;
     cursor:pointer;
@@ -223,18 +229,22 @@ button:hover{
 
 <header>
 <nav>
-<strong>Charles Silva</strong>
+    <div>
+        <strong>Charles Silva</strong>
+    </div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="nav-right">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-<ul id="menu">
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#formacao">Formação</a></li>
-<li><a href="#portfolio">Portfólio</a></li>
-<li><a href="#contato">Contato</a></li>
-<li><span class="theme-toggle" onclick="toggleTheme()">🌙</span></li>
-</ul>
+        <ul id="menu">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
 
+        <span class="theme-toggle" onclick="toggleTheme()">🌙</span>
+    </div>
 </nav>
 </header>
 
